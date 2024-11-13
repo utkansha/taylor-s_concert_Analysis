@@ -1,7 +1,7 @@
 numpy 
 pandas 
 seaborn 
-matplotlib
+matplotlib.pyplot
 re
 random
 streamlit
