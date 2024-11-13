@@ -8,7 +8,7 @@ st.write("An exploratory data analysis on concert data to understand trends and 
 
 # File Upload
 st.sidebar.header("Upload your dataset")
-uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type="csv")
+uploaded_file = st.sidebar.file_uploader("Taylor_Train.csv", type="csv")
 
 if uploaded_file is not None:
     # Load data
