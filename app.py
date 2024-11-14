@@ -28,12 +28,12 @@ df = df.rename(columns=new_col)
 
 # Data cleaning functions
 def clean_revenue(val):
-    if isinstance(val, str):  # Check if the value is a string
-        return float(val.replace('$', '').replace(',', ''))
-    elif pd.isna(val):  # If the value is NaN
+    try:
+        # Remove dollar signs and commas, then convert to float
+        return float(re.sub(r'[^\d.]', '', val)) if isinstance(val, str) else 0.0
+    except ValueError:
+        # If conversion fails, return 0 or NaN
         return 0.0
-    else:  # If the value is already a number
-        return val
 
 def clean_tickets(val):
     if isinstance(val, str) and '/' in val:
