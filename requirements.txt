@@ -1,7 +1,5 @@
-re
-random
 streamlit
-numpy==1.24.3  # or a compatible version for your Python version
+numpy>=1.26.0
 pandas==2.2.3
 seaborn==0.13.2
-matplotlib==3.7.1  # or another compatible version for your Python version
+matplotlib==3.7.1  # adjust if you have a preferred version
